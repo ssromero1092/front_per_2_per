@@ -1,0 +1,16 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh">
+
+  <div class="chat-container" >
+    <div class="message-container" #messageContainer>
+      <div class="message" *ngFor="let message of messages"
+        [ngClass]="{'user': message.user === 'user' , 'bot': message.user === 'bot'}">
+        {{ message.text }}
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input name="esc_mensaje" id="esc_mensaje" [(ngModel)]="mensajeNuevo" (keyup.enter)="sendMessage()" placeholder="Escribe un mensaje..." />
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
+  </div>
+</div>

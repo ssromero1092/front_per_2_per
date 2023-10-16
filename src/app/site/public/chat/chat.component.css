@@ -1,0 +1,119 @@
+/*
+   Estilos para el contenedor del chat
+*/
+.chat-container {
+  width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/*
+   Estilos para el contenedor de mensajes
+*/
+.message-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  max-height: 1000px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+/*
+   Estilos para los mensajes
+*/
+.message {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  word-wrap: break-word;
+  background-color: #cfdaff;
+  border-radius: 15px 0 15px 0 ;
+}
+
+/*
+   Estilos para mensajes de usuario
+*/
+.user {
+  background-color: #cce6ff;
+  align-self: flex-end;
+  max-width: 70%; /* Aplica un ancho máximo si es necesario */
+}
+
+/*
+   Estilos para mensajes del bot
+*/
+.bot {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  max-width: 70%; /* Aplica un ancho máximo si es necesario */
+}
+
+/*
+   Estilos para mensajes de usuario (derecha)
+*/
+.message.user {
+  background-color: #cce6ff;
+  text-align: right;
+  border-radius: 0 15px 0 15px ;
+}
+
+/*
+   Estilos para mensajes del bot (izquierda)
+*/
+.message.bot {
+  background-color: #f0f0f0;
+  text-align: left;
+  border-radius: 0 15px 0 15px ;
+}
+
+/*
+   Estilos para el contenedor de entrada
+*/
+.input-container {
+  display: flex;
+  background-color: #f9f9f9;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+/*
+   Estilos para el campo de entrada de texto
+*/
+.input-container input {
+  width: 80%;
+}
+
+/*
+   Estilos para el botón de envío de texto
+*/
+.input-container button {
+  margin-left: 10px;
+}
+/*
+   Estilos para input de texto
+
+*/
+input[type="text" ] {
+  width: 80%;
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+/*
+   Estilos para botones
+
+*/
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
