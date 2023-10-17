@@ -1,27 +1,62 @@
-# FrontPer2Per
+# Fronend  front_per_2_per 
+### Aplicación de Conversión de Divisas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+Esta es la aplicación frontend "front_per_2_per" desarrollada en Angular 16.2.6. Permite a los usuarios convertir pesos a dólares y viceversa de manera sencilla.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de ejecutar la aplicación, asegúrate de tener lo siguiente instalado en tu sistema:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (versión recomendada: 16.2.6)
+- [npm](https://www.npmjs.com/) (viene incluido con Node.js)
+- [Angular CLI](https://angular.io/cli) (puedes instalarlo globalmente con `npm install -g @angular/cli`)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Descarga e Instalación
 
-## Build
+1. Clona este repositorio en tu máquina local:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```sh
+   git clone https://github.com/ssromero1092/front_per_2_per.git
+   ```
+   
+2. Navega al directorio del proyecto:
 
-## Running unit tests
+   ```sh
+   cd front_per_2_per
+   ```
+   
+3. Instala las dependencias del proyecto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```sh
+    npm install
+    ```
 
-## Running end-to-end tests
+## Ejecución
+Una vez que hayas completado la instalación, puedes ejecutar la aplicación con el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```sh
+ng serve
+```
 
-## Further help
+La aplicación se ejecutará en http://localhost:4200 de manera predeterminada. Puedes acceder a esta URL en tu navegador para interactuar con la aplicación.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso
+La aplicación te solicitara un usuario, te pedirá un tipo de divisa ya sea dólar (USD) o pesos colombianos (COP), te permite ingresar una cantidad en pesos o dólares y realizar conversiones en tiempo real, verás la conversión de divisas de manera inmediata.
+
+## Disponibilidad en Línea
+Además de ejecutar la aplicación localmente, también puedes acceder a la versión en línea de la aplicación en la siguiente dirección:
+
+https://front-per-2-per.web.app/chat
+
+
+
+
+
+
+
+
+
+
+
+
+
