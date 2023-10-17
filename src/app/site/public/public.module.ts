@@ -7,6 +7,8 @@ import { PublicRoutingModule } from './public-routing.module';
 import { RouterModule } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -17,11 +19,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     NgbModule,
     PublicRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   declarations: [
     LoginComponent,
     ChatComponent,
+
 
 
 

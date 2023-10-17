@@ -50,6 +50,7 @@ export class ChatComponent {
     this.messages.push({ text: this.mensagePideMoneda, user: 'boot' });
     this.marcaMomentoChat = 1;
   }
+
   // Método para enviar un mensaje en el chat
   sendMessage() {
     if (this.mensajeNuevo) {

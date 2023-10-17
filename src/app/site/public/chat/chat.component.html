@@ -7,7 +7,6 @@
         {{ message.text }}
       </div>
     </div>
-
     <div class="input-container">
       <input name="esc_mensaje" id="esc_mensaje" [(ngModel)]="mensajeNuevo" (keyup.enter)="sendMessage()" placeholder="Escribe un mensaje..." />
       <button (click)="sendMessage()">Enviar</button>

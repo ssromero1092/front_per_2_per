@@ -10,8 +10,6 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    //canActivate: [AuthGuard],
-    //component: FullComponent,
     loadChildren: () => import('./site/private/modules/modules.module').then(m => m.ModulesModule)
   },
   { path: '**', component: Page404Component },
