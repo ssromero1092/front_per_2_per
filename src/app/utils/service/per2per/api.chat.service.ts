@@ -17,6 +17,11 @@ export class ApiChatService {
     private http: HttpClient,
   ) { }
 
+  public getChat(): Observable<{}> {
+    const strEndPoint = urlAPI + endpoint;
+    return this.http.get<Response>(strEndPoint, {});
+  }
+
   public postChat(usuario:string,valor_entrada:number,tipo_mensaje:string): Observable<{}> {
     const strEndPoint = urlAPI + endpoint;
       return this.http.post<Response>(strEndPoint, { usuario,valor_entrada,tipo_mensaje }, {  observe: 'response' })

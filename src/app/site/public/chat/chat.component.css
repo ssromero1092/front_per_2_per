@@ -9,6 +9,9 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+
+
+
 /*
    Estilos para el contenedor de mensajes
 */
@@ -110,10 +113,10 @@ input[type="text" ] {
 
 */
 button {
-  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+  margin-left: 10px;
 }

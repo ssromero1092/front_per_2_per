@@ -1,15 +1,55 @@
-<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh">
 
-  <div class="chat-container" >
-    <div class="message-container" #messageContainer>
-      <div class="message" *ngFor="let message of messages"
-        [ngClass]="{'user': message.user === 'user' , 'bot': message.user === 'bot'}">
-        {{ message.text }}
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh">
+    <div class="chat-container" >
+      <div class="message-container" #mesnajeContenedor>
+        <div class="message" *ngFor="let message of messages"
+          [ngClass]="{'user': message.user === 'user' , 'bot': message.user === 'bot'}">
+          {{ message.text }}
+        </div>
+      </div>
+      <div class="input-container">
+        <input name="esc_mensaje" id="esc_mensaje" [(ngModel)]="mensajeNuevo" (keyup.enter)="enviarMensaje()" placeholder="Escribe un mensaje..." />
+        <button class="btn btn-primary" (click)="enviarMensaje()">Enviar</button>
       </div>
     </div>
-    <div class="input-container">
-      <input name="esc_mensaje" id="esc_mensaje" [(ngModel)]="mensajeNuevo" (keyup.enter)="sendMessage()" placeholder="Escribe un mensaje..." />
-      <button (click)="sendMessage()">Enviar</button>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <button class="btn btn-danger" (click)="salir()" >Cambiar Usuario</button>
+
+    <button class="btn btn-primary" (click)="abrirPopup()"><i class="fas fa-cog"></i></button>
+  </div>
+
+  <div *ngIf="mostrarPopup" class="popup">
+    <div class="popup-content">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Logs Conversiones</h2>
+          <hr>
+          <div *ngFor="let item of logData">
+            <div>
+              <strong>Fecha y Hora:</strong> {{ item.timestamp | date: 'dd/MM/yyyy, HH:mm:ss' }}
+            </div>
+            <div>
+              <strong>Tipo Cambio:</strong> {{ item.tipo_mensaje }}
+            </div>
+            <div>
+              <strong>Usuario:</strong> {{ item.usuario }}
+            </div>
+            <div>
+              <strong>Valor Entrada:</strong> {{ item.valor_entrada | currency: 'USD':'symbol':'1.2-2' }}
+            </div>
+            <div>
+              <strong>Valor Salida:</strong> {{ item.valor_salida | currency: 'USD':'symbol':'1.2-2' }}
+            </div>
+            <hr>
+          </div>
+        </div>
+        <button class="btn btn-danger" (click)="cerrarPopup()">Cerrar Logs</button>
+      </div>
     </div>
   </div>
-</div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+

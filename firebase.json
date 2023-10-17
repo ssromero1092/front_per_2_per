@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/front_per_2_per",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

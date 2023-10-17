@@ -1,20 +1,22 @@
-<div class="container d-flex justify-content-center align-items-center" >
-    <div class="col-md-12">
-        <div class="card" style="border: transparent">
-            <form (submit)="ngOnSubmit($event)" class="form-horizontal">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label class="centrar-texto" for="nombre_usuario">Ingrese un Nombre de Usuario</label>
-                        <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-control centrar-texto" [(ngModel)]="usuario.nombre_usuario" >
-                    </div>
-                    <div class="p-1 border-top">
-                        <div class="action-form">
-                            <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Acceder</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="col-md-12">
+    <div class="card" style="border: transparent">
+      <form (submit)="onSubmit($event)" class="form-horizontal">
+        <div class="card-body">
+          <div class="form-group">
+            <label class="centrar-texto" for="nombre_usuario">Ingrese un Nombre de Usuario</label>
+            <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-control centrar-texto"
+              [(ngModel)]="usuario.nombre_usuario">
+          </div>
+          <div class="p-1 border-top">
+            <div class="action-form">
+              <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Acceder</button>
+            </div>
+          </div>
         </div>
+      </form>
     </div>
+  </div>
 </div>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
